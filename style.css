@@ -22,4 +22,16 @@ input{
     padding-right: 200px;
     padding-left: 200px;
 }
+h1{
+    color: white;
+}
+h3{
+    color: white;
+}
+#sresults{
+    padding-right: 190px;
+    padding-left: 166px;
+    text-align: center;
+}
+
 
