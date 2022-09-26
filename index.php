@@ -8,7 +8,9 @@
     <title>Trainer</title>
 </head>
 <body>
-    <font color="blue"></font>
+    
+   
+    </div>
     <div class="form">
     <form>
         <h2>Question</h2>
@@ -37,15 +39,17 @@
         <br>
 
         <input type="submit" value="Save" id="save">
+        <br>
+        <br>
+        
+          <input type=button onClick="parent.location='results.html'"
+    value='Show results' id="sresults">
+    
+        
 
       </form>
       </div>
 
-      <div class="results">
-        Results
-        Yes 
-        No 
-        Idk 
-      </div>
+      
 </body>
 </html>
