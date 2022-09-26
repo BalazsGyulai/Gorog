@@ -42,7 +42,7 @@
         <br>
         <br>
         
-          <input type=button onClick="parent.location='results.html'"
+          <input type=button onClick="parent.location='results.php'"
     value='Show results' id="sresults">
     
         
