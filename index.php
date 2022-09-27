@@ -35,15 +35,32 @@ if ($result->num_rows > 0){
         <br>
         <br>
         
-        <input type="submit" value="Yes">
-        <input type="submit" value="No">
-        <input type="submit" value="I don't know">
+        <Label>Yes</Label>
+        <input type="checkbox" name="yes" id="yes1" value="yes">
+        
+
         <br>
         <br>
 
-        <input type="submit" value="Save">
+        <label>No</label>
+        <input type="checkbox" name="no" id="no1" value="no">
+        <br>
+        <br>
+        <label>I don't know</label>
+        <input type="checkbox" name="idk" id="idk1" value="idk ">
+        <br>
+        <br>
+
+        <input type="submit" value="Save" id="save">
 
       </form>
+      </div>
+
+      <div class="results">
+        Results
+        Yes 
+        No 
+        Idk 
       </div>
 </body>
 </html>

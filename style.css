@@ -13,3 +13,13 @@ h2
     color: white;
     
 }
+input{
+    border-radius: 15px;
+    padding: 15px;
+}
+#save
+{
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
