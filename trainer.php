@@ -61,7 +61,7 @@ if($row["yes"] == 1){
 
         <?php 
         if($row["no"] == 1){
-            echo '<input type="checkbox" name="no" id="no1" value="no" checked onclick="ido()>';
+            echo '<input type="checkbox" name="no" id="no1" value="no" checked onclick=ido()>';
             
         } else {
            echo '<input type="checkbox" name="no" id="no1" value="no" onclick="ido()">';
@@ -92,7 +92,7 @@ if($row["yes"] == 1){
         <br>
         <br>
         
-          <input type=button onClick="parent.location='results.php'"
+          <input type=button onClick="parent.location='results.html'"
     value='Show results' id="sresults">
     
         
