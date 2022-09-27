@@ -30,7 +30,10 @@ if ($result->num_rows > 0){
     
    
     </div>
+    <div class="rain">
+    <div class="lightining">
     <div class="form">
+        <div id="typewriter">
     <form method="POST" action="./php/question.php">
         <h2>Question</h2>
         
@@ -95,10 +98,11 @@ if($row["yes"] == 1){
           <input type=button onClick="parent.location='results.html'"
     value='Show results' id="sresults">
     
-        
-
+</div>
       </form>
       </div>
+    </div>
+</div>
 
       
 </body>
