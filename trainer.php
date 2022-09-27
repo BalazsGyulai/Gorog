@@ -9,6 +9,7 @@ if ($result->num_rows > 0){
     $row = $result->fetch_assoc();
 } else {
     
+    $row["questId"] = 0;
     $row["publish"] = 0;
     $row["quest"] = "";
     $row["yes"] = 0;
@@ -37,12 +38,13 @@ if ($result->num_rows > 0){
         <h2>Question</h2>
         
         
+        <input type="hidden" id="a" name="a" value="<?php echo $row["questId"] ?>">
         <input type="text" id="question" name="question" value="<?php echo $row["quest"] ?>">
         <!-- <input type="checkbox" name="publish" id="publishq" value="publish"> -->
 
         <?php
 
-if($row["publish"] == 1){
+if($row["publish"] != 0){
     echo '<input type="checkbox" name="publish" id="publishq" value="publish" checked>';
     
 } else {
@@ -58,11 +60,11 @@ if($row["publish"] == 1){
         
         <?php
 
-if($row["yes"] == 1){
-    echo '<input type="checkbox" name="yes" id="yes1" value="yes"  checked onclick="ido()" >';
+if($row["yes"] != 0){
+    echo '<input type="checkbox" name="yes" id="yes1" value='.$row["yes"].'"  checked onclick="ido(this)" >';
     
 } else {
-               echo '<input type="checkbox" name="yes" id="yes1" value="yes" onclick="ido()">';
+               echo '<input type="checkbox" name="yes" id="yes1" value='.$row["yes"].'" onclick="ido(this)">';
 
            }
         ?>
@@ -73,11 +75,11 @@ if($row["yes"] == 1){
         <label>No</label>
 
         <?php 
-        if($row["no"] == 1){
-            echo '<input type="checkbox" name="no" id="no1" value="no" checked onclick=ido()>';
+        if($row["no"] != 0){
+            echo '<input type="checkbox" name="no" id="no1" value="'.$row["no"].'" checked onclick=ido(this)>';
             
         } else {
-           echo '<input type="checkbox" name="no" id="no1" value="no" onclick="ido()">';
+           echo '<input type="checkbox" name="no" id="no1" value="'.$row["no"].'" onclick="ido(this)">';
             
         }
         ?>
@@ -87,11 +89,11 @@ if($row["yes"] == 1){
         <label>I don't know</label>
 
         <?php 
-        if($row["dont_know"] == 1){
-            echo '<input type="checkbox" name="idk" id="idk1" value="idk" checked onclick="ido()">';
+        if($row["dont_know"] != 0){
+            echo '<input type="checkbox" name="idk" id="idk1" value="'.$row["dont_know"].'" checked onclick="ido(this)">';
             
         } else {
-           echo '<input type="checkbox" name="idk" id="idk1" value="idk" onclick="ido()">';
+           echo '<input type="checkbox" name="idk" id="idk1" value="'.$row["dont_know"].'" onclick="ido(this)">';
             
         }
         ?>

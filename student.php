@@ -1,12 +1,15 @@
 <?php
 include_once("./php/connect.php");
 
-$result = $database->query("SELECT questId, quest FROM question ORDER BY questId DESC LIMIT 1");
+$result = $database->query("SELECT questId, quest, yes, no, dont_know FROM question ORDER BY questId DESC LIMIT 1");
 
 if ($result->num_rows > 0){   
     $row = $result->fetch_assoc();
 } else {
     $row["quest"] = "There is no question yet.";
+    $row["yes"] ="0";
+    $row["no"] ="0";
+    $row["dont_know"] ="0";
 }
 ?>
 
@@ -18,6 +21,7 @@ if ($result->num_rows > 0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
     <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="student-background.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -30,6 +34,7 @@ echo " <h1>".$row["quest"]."</h1> "
     <h1 id="question">&nbsp;</h1>
 <div class="buttons">
     <div id="block">
+    
         <div class="yes">
 
             <input id="yes" type="submit" name="submit" title="Yes" value="Yes">
