@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
     <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="student-background.css">
     <script src="script.js"></script>
 </head>
-    <h1>The Question:</h1>
-    
+    <h1 id="typewriter">The Question:</h1>
     <h1 id="question">&nbsp;</h1>
 <div class="buttons">
     <div id="block">
@@ -23,7 +23,6 @@
     <div class="dontknow">
         <input id="dontknow" type="submit"value="Dont know">
     </div>
-</div>
-
+    </div>
 </body>
 </html>
