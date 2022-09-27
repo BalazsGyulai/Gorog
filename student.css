@@ -17,6 +17,8 @@ h1{
     color: white;
     text-align:center;
     font-size: 75px;
+    user-select:none;
+    text-shadow: white;
 }
 
 .buttons{
@@ -58,6 +60,7 @@ float: right;
     border-style:groove;
     border-color: black;
     border-width: 6px;
+    font-weight: bold;
 
 }
 
