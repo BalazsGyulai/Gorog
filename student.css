@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+
+}
+
+h1{
+    color: white;
+    text-align:center;
+}
+
+.buttons{
+    padding-top: 375px;
+}
+
+input{
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#yes{
+    width: 755px;
+    height: 100px;
+}
+
+.yes{
+float:right;
+}
+
+#no{
+    width: 755px;
+    height: 100px;
+}
+
+.no{
+padding-bottom: 10px;
+float: left;
+}
+
+#dontknow{ 
+    height: 100px;
+    width:100%;
+}

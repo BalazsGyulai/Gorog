@@ -26,7 +26,9 @@ if ($result->num_rows > 0){
     <title>Trainer</title>
 </head>
 <body>
-    <font color="blue"></font>
+    
+   
+    </div>
     <div class="form">
     <form method="POST" action="./php/question.php">
         <h2>Question</h2>
@@ -86,15 +88,17 @@ if($row["yes"] == 1){
         <br>
 
         <input type="submit" value="Save" id="save">
+        <br>
+        <br>
+        
+          <input type=button onClick="parent.location='results.php'"
+    value='Show results' id="sresults">
+    
+        
 
       </form>
       </div>
 
-      <div class="results">
-        Results
-        Yes 
-        No 
-        Idk 
-      </div>
+      
 </body>
 </html>
