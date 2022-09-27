@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
 body{
     background-color: black;
+    font-family: 'Anonymous Pro', monospace;  
 
 }
 
@@ -9,7 +12,7 @@ h1{
 }
 
 .buttons{
-    padding-top: 375px;
+    padding-top: 350px      ;
 }
 
 input{
@@ -17,26 +20,57 @@ input{
     padding: 15px;
 }
 
-#yes{
-    width: 755px;
+#yes, #no{
+    width: 750px;
     height: 100px;
 }
 
 .yes{
-float:right;
-}
-
-#no{
-    width: 755px;
-    height: 100px;
+float:left;
 }
 
 .no{
 padding-bottom: 10px;
-float: left;
+float: right;
 }
 
 #dontknow{ 
     height: 100px;
     width:100%;
 }
+
+#timeLeft{
+    color: white;
+    
+}
+
+#yes:hover, #no:hover,#dontknow:hover{
+    background-color: gainsboro;
+    border-style:groove;
+    border-color: grey;
+    border-width: 6px;
+
+}
+
+#typewriter{
+    overflow: hidden;
+    border-right: .15em solid hidden;
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(60, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+
