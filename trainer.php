@@ -23,6 +23,7 @@ if ($result->num_rows > 0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
     <title>Trainer</title>
 </head>
 <body>
@@ -35,7 +36,7 @@ if ($result->num_rows > 0){
         
         
         <input type="text" id="question" name="question" value="<?php echo $row["quest"] ?>">
-        <input type="checkbox" name="publish" id="publishq" value="publish">
+        <input type="checkbox" name="publish" id="publishq" value="publish" >
         <label for="publishq">Publish</label>
         <br>
         <br>
@@ -45,10 +46,10 @@ if ($result->num_rows > 0){
         <?php
 
 if($row["yes"] == 1){
-    echo '<input type="checkbox" name="yes" id="yes1" value="yes" checked>';
+    echo '<input type="checkbox" name="yes" id="yes1" value="yes"  checked onclick="ido()" >';
     
 } else {
-               echo '<input type="checkbox" name="yes" id="yes1" value="yes">';
+               echo '<input type="checkbox" name="yes" id="yes1" value="yes" onclick="ido()">';
 
            }
         ?>
@@ -60,10 +61,10 @@ if($row["yes"] == 1){
 
         <?php 
         if($row["no"] == 1){
-            echo '<input type="checkbox" name="no" id="no1" value="no" checked>';
+            echo '<input type="checkbox" name="no" id="no1" value="no" checked onclick="ido()>';
             
         } else {
-           echo '<input type="checkbox" name="no" id="no1" value="no">';
+           echo '<input type="checkbox" name="no" id="no1" value="no" onclick="ido()">';
             
         }
         ?>
@@ -74,10 +75,10 @@ if($row["yes"] == 1){
 
         <?php 
         if($row["dont_know"] == 1){
-            echo '<input type="checkbox" name="idk" id="idk1" value="idk " checked>';
+            echo '<input type="checkbox" name="idk" id="idk1" value="idk" checked onclick="ido()">';
             
         } else {
-           echo '<input type="checkbox" name="idk" id="idk1" value="idk ">';
+           echo '<input type="checkbox" name="idk" id="idk1" value="idk" onclick="ido()">';
             
         }
         ?>
