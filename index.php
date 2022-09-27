@@ -10,7 +10,7 @@
 <body>
     <font color="blue"></font>
     <div class="form">
-    <form>
+    <form method="POST" action="./php/question.php">
         <h2>Question</h2>
         
         
