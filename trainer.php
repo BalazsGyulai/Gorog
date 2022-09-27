@@ -8,6 +8,8 @@ if ($result->num_rows > 0){
 
     $row = $result->fetch_assoc();
 } else {
+    
+    $row["publish"] = 0;
     $row["quest"] = "";
     $row["yes"] = 0;
     $row["no"] = 0;
@@ -35,7 +37,18 @@ if ($result->num_rows > 0){
         
         
         <input type="text" id="question" name="question" value="<?php echo $row["quest"] ?>">
-        <input type="checkbox" name="publish" id="publishq" value="publish">
+        <!-- <input type="checkbox" name="publish" id="publishq" value="publish"> -->
+
+        <?php
+
+if($row["publish"] == 1){
+    echo '<input type="checkbox" name="publish" id="publishq" value="publish" checked>';
+    
+} else {
+               echo '<input type="checkbox" name="publish" id="publishq" value="publish">';
+
+           }
+        ?>
         <label for="publishq">Publish</label>
         <br>
         <br>
@@ -44,7 +57,7 @@ if ($result->num_rows > 0){
         
         <?php
 
-if($row["yes"] == 1){
+if($row["yes"] != "0"){
     echo '<input type="checkbox" name="yes" id="yes1" value="yes" checked>';
     
 } else {
@@ -59,7 +72,7 @@ if($row["yes"] == 1){
         <label>No</label>
 
         <?php 
-        if($row["no"] == 1){
+        if($row["no"] != "0"){
             echo '<input type="checkbox" name="no" id="no1" value="no" checked>';
             
         } else {
@@ -73,7 +86,7 @@ if($row["yes"] == 1){
         <label>I don't know</label>
 
         <?php 
-        if($row["dont_know"] == 1){
+        if($row["dont_know"] != "0"){
             echo '<input type="checkbox" name="idk" id="idk1" value="idk " checked>';
             
         } else {

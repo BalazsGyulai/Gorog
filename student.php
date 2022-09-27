@@ -1,3 +1,15 @@
+<?php
+include_once("./php/connect.php");
+
+$result = $database->query("SELECT questId, quest FROM question ORDER BY questId DESC LIMIT 1");
+
+if ($result->num_rows > 0){   
+    $row = $result->fetch_assoc();
+} else {
+    $row["quest"] = "There is no question yet.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +20,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>The Question:</h1> 
+    <form action="./php/vote.php" method="post">
+
+    <?php
+echo " <h1>".$row["quest"]."</h1> "
+    ?>
+   
     <h1 id="question">&nbsp;</h1>
 <div class="buttons">
     <div id="block">
 
         <div class="yes">
 
-            <input id="yes" type="submit" title="Yes" value="Yes">
+            <input id="yes" type="submit" name="submit" title="Yes" value="Yes">
 
         </div>
 
         <div class="no">
 
-            <input id="no" type="submit" title="No" value="No">  
+            <input id="no" type="submit" name="submit" title="No" value="No">  
 
         </div>
 
@@ -29,9 +46,9 @@
 
     <div class="dontknow">
 
-        <input id="dontknow" type="submit" title="Dont know" value="Dont know">
+        <input id="dontknow" type="submit" name="submit" title="Dont know" value="Dont know">
     </div>
-    
+</form>
 </div>
     
 
