@@ -1,3 +1,18 @@
+<?php
+
+include_once("./php/connect.php");
+
+$result = $database->query("SELECT * FROM question ORDER BY questId DESC LIMIT 1");
+
+if ($result->num_rows > 0){
+
+    $row = $result->fetch_assoc();
+} else {
+    $row["quest"] = "";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +29,7 @@
         <h2>Question</h2>
         
         
-        <input type="text" id="question" name="question">
+        <input type="text" id="question" name="question" value="<?php echo $row["quest"] ?>">
         <input type="checkbox" name="publish" id="publishq" value="publish">
         <label for="publishq">Publish</label>
         <br>
