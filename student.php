@@ -21,8 +21,6 @@ if ($result->num_rows > 0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
     <link rel="stylesheet" href="student.css">
-    <link rel="stylesheet" href="student-background.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <form action="./php/vote.php" method="post">
@@ -34,22 +32,32 @@ echo " <h1>".$row["quest"]."</h1> "
     <h1 id="question">&nbsp;</h1>
 <div class="buttons">
     <div id="block">
-    
-        <div class="yes">
+    <?php
+    if ($row["yes"] != "0") {
+        echo ' <div class="yes">
 
-            <input id="yes" type="submit" name="submit" title="Yes" value="Yes">
+        <input id="yes" type="submit" name="submit" title="Yes" value="Yes">
 
-        </div>
-        <div class="no">
+    </div>';
+    }
+    if ($row["no"] != "0") {
+        echo '       <div class="no">
 
-            <input id="no" type="submit" name="submit" title="No" value="No">  
+        <input id="no" type="submit" name="submit" title="No" value="No">  
 
-        </div>
-    </div>
-    <div class="dontknow">
+    </div>';
+    }
+    if ($row["dont_know"] != "0") {
+        echo '     <div class="dontknow">
 
         <input id="dontknow" type="submit" name="submit" title="Dont know" value="Dont know">
+    </div>';
+    }
+    ?>
+       
+ 
     </div>
+
 </form>
 </div>
 

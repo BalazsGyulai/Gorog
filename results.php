@@ -39,10 +39,13 @@ if ($result->num_rows > 0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+   
     <title>Results</title>
 </head>
 <body>
-
+    <div class="rain">
+    <div class="lightining">
+ <div id="typewriter">
     <div class="results" style="text-align:center" >
         <h1>Results</h1>
         <h2><?php echo $row["quest"] ?></h2>
@@ -56,6 +59,10 @@ if ($result->num_rows > 0){
 
         
     </div>
+</div>
+</div>
+</div>
+
     
 </body>
 </html>
