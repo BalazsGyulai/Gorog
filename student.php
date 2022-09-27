@@ -47,6 +47,8 @@ echo " <h1>".$row["quest"]."</h1> "
 
     </div>';
     }
+
+    echo "</div>";
     if ($row["dont_know"] != "0") {
         echo '     <div class="dontknow">
 
