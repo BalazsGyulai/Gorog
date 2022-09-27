@@ -1,28 +1,49 @@
-function ido()
+function yes2()
 {
     let currentDate=new Date();
     let time = currentDate.getHours()+":"+currentDate.getMinutes()+":"+currentDate.getSeconds();
     
-    if(document.getElementById("yes1").checked)
-    {
+    
+   
         var yes = document.getElementById("yes1").value=time;
-
-    }
+   
     
-    else if(document.getElementById("no1").checked)
-    {
-        var no = document.getElementById("no1").value=time;
-
-    }
-    
-    else if(document.getElementById("idk1").checked)
-    {
-        var idk = document.getElementById("idk1").value=time;
-    }
-    
-    console.log("yes"+yes+" "+"no"+no+" "+"idk"+idk)
+    console.log("yes"+yes)
     
 
 
 
 }
+function no2()
+{
+    let currentDate=new Date();
+    let time = currentDate.getHours()+":"+currentDate.getMinutes()+":"+currentDate.getSeconds();
+    
+   
+   
+        var no = document.getElementById("no1").value=time;
+   
+    
+    console.log("no"+no)
+    
+
+
+
+}
+function idk2()
+{
+    let currentDate=new Date();
+    let time = currentDate.getHours()+":"+currentDate.getMinutes()+":"+currentDate.getSeconds();
+    
+    
+   
+        var idk = document.getElementById("idk1").value=time;
+   
+    
+    console.log("idk"+idk)
+    
+
+
+
+}
+
